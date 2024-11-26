@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DashboardManagementService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f64d1ba97698f46bdec7ce544c464611264ab00d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+774ca73f9d99021d9131f000f98758d30be2e16e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DashboardManagementService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DashboardManagementService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

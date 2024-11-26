@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "suZj4MS95HGEuhm981oTBqBQbViapUXK3fYozL4R8eY=",
+  "Source": "DashboardManagementService",
+  "BasePath": "_content/DashboardManagementService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

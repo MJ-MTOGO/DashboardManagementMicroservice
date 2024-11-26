@@ -1,7 +1,30 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8348498-00CC-4441-BA16-8933D9B6F3D4}|..\\DashboardManagementServiceTest\\DashboardManagementServiceTest.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservicetest\\unittest\\dashboardunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8348498-00CC-4441-BA16-8933D9B6F3D4}|..\\DashboardManagementServiceTest\\DashboardManagementServiceTest.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservicetest\\intergrationtest\\dashboardintergrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservice\\infrastructure\\publishers\\googlepubsubmessagebus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|solutionrelative:infrastructure\\publishers\\googlepubsubmessagebus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservice\\infrastructure\\publishers\\messagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|solutionrelative:infrastructure\\publishers\\messagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservice\\application\\ports\\imessagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|solutionrelative:application\\ports\\imessagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\dashboardmanagementmicroservice\\dashboardmanagementservice\\application\\ports\\imessagebus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87105575-F015-4A32-876C-E0BEE0621C7B}|DashboardManagementService.csproj|solutionrelative:application\\ports\\imessagebus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +41,84 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardIntergrationTest.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementServiceTest\\IntergrationTest\\DashboardIntergrationTest.cs",
+              "RelativeDocumentMoniker": "..\\DashboardManagementServiceTest\\IntergrationTest\\DashboardIntergrationTest.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementServiceTest\\IntergrationTest\\DashboardIntergrationTest.cs",
+              "RelativeToolTip": "..\\DashboardManagementServiceTest\\IntergrationTest\\DashboardIntergrationTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:58:39.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementServiceTest\\UnitTest\\DashboardUnitTest.cs",
+              "RelativeDocumentMoniker": "..\\DashboardManagementServiceTest\\UnitTest\\DashboardUnitTest.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementServiceTest\\UnitTest\\DashboardUnitTest.cs",
+              "RelativeToolTip": "..\\DashboardManagementServiceTest\\UnitTest\\DashboardUnitTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:57:19.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GooglePubSubMessageBus.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Infrastructure\\Publishers\\GooglePubSubMessageBus.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Publishers\\GooglePubSubMessageBus.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Infrastructure\\Publishers\\GooglePubSubMessageBus.cs",
+              "RelativeToolTip": "Infrastructure\\Publishers\\GooglePubSubMessageBus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:51:01.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessagePublisher.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Infrastructure\\Publishers\\MessagePublisher.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Publishers\\MessagePublisher.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Infrastructure\\Publishers\\MessagePublisher.cs",
+              "RelativeToolTip": "Infrastructure\\Publishers\\MessagePublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:50:44.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMessagePublisher.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Application\\Ports\\IMessagePublisher.cs",
+              "RelativeDocumentMoniker": "Application\\Ports\\IMessagePublisher.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Application\\Ports\\IMessagePublisher.cs",
+              "RelativeToolTip": "Application\\Ports\\IMessagePublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:50:35.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMessageBus.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Application\\Ports\\IMessageBus.cs",
+              "RelativeDocumentMoniker": "Application\\Ports\\IMessageBus.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\DashboardManagementMicroservice\\DashboardManagementService\\Application\\Ports\\IMessageBus.cs",
+              "RelativeToolTip": "Application\\Ports\\IMessageBus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:50:17.625Z",
+              "EditorCaption": ""
             }
           ]
         }
