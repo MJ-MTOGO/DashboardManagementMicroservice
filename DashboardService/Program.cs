@@ -1,5 +1,5 @@
 
-namespace AnalyticsReportingService
+namespace DashboardService
 {
     public class Program
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsReportingService", "AnalyticsReportingService.csproj", "{296ED174-CD37-4DAD-832A-B5944BD6EACD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardService", "DashboardService.csproj", "{A22B7281-A66F-4BAC-A8BB-44EC9F35ADDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{296ED174-CD37-4DAD-832A-B5944BD6EACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{296ED174-CD37-4DAD-832A-B5944BD6EACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{296ED174-CD37-4DAD-832A-B5944BD6EACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{296ED174-CD37-4DAD-832A-B5944BD6EACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A22B7281-A66F-4BAC-A8BB-44EC9F35ADDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A22B7281-A66F-4BAC-A8BB-44EC9F35ADDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A22B7281-A66F-4BAC-A8BB-44EC9F35ADDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A22B7281-A66F-4BAC-A8BB-44EC9F35ADDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E3F72965-3A3E-432E-8919-45308628377F}
+		SolutionGuid = {4EE4986B-0D93-4B21-8BD5-C9EDE4C78A82}
 	EndGlobalSection
 EndGlobal

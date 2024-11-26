@@ -1,6 +1,0 @@
-@AnalyticsReportingService_HostAddress = http://localhost:5033
-
-GET {{AnalyticsReportingService_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
