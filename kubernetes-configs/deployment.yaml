@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-management-service
+  labels:
+    app: dashboard-management-service
+spec:
+  replicas: 2 # Number of pods
+  selector:
+    matchLabels:
+      app: dashboard-management-service
+  template:
+    metadata:
+      labels:
+        app: dashboard-management-service
+    spec:
+      containers:
+        - name: dashboard-management-service
+          image: gcr.io/mtogo-439509/dashboard-management-service:latest # Replace with your Docker image name
+          ports:
+            - containerPort: 8080 # The container's exposed port
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production # Example environment variable
