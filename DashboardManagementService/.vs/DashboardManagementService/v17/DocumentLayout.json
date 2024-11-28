@@ -52,8 +52,7 @@
               "RelativeToolTip": "..\\DashboardManagementServiceTest\\IntergrationTest\\DashboardIntergrationTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:58:39.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:58:39.164Z"
             },
             {
               "$type": "Document",
@@ -78,8 +77,7 @@
               "RelativeToolTip": "Infrastructure\\Publishers\\GooglePubSubMessageBus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:51:01.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:51:01.636Z"
             },
             {
               "$type": "Document",
@@ -91,8 +89,7 @@
               "RelativeToolTip": "Infrastructure\\Publishers\\MessagePublisher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:50:44.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:50:44.4Z"
             },
             {
               "$type": "Document",
@@ -104,8 +101,7 @@
               "RelativeToolTip": "Application\\Ports\\IMessagePublisher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:50:35.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:50:35.901Z"
             },
             {
               "$type": "Document",
@@ -117,8 +113,7 @@
               "RelativeToolTip": "Application\\Ports\\IMessageBus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:50:17.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T14:50:17.625Z"
             }
           ]
         }

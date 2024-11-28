@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dashboard-management-service
-          image: gcr.io/mtogo-439509/dashboard-management-service:latest # Replace with your Docker image name
+          image: gcr.io/mtogov1/dashboard-management-service:latest # Replace with your Docker image name
           ports:
             - containerPort: 8080 # The container's exposed port
           env:
