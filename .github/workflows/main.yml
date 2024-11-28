@@ -22,13 +22,8 @@ jobs:
       # Step 3: Add Google Cloud SDK Repository and Install Plugin
       - name: Install gke-gcloud-auth-plugin
         run: |
-          # Add the Google Cloud SDK repository
           echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
-          
-          # Download the public key and add it to the keyring
           curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
-          
-          # Update and install the plugin
           sudo apt-get update
           sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
 
@@ -38,19 +33,17 @@ jobs:
 
       # Step 5: Run Unit Tests
       - name: Run Unit Tests
-        working-directory: ./DashboardManagementServiceTests
+        working-directory: ./DashboardManagementServiceTest
         run: |
-          # Restore dependencies
-          dotnet restore DashboardManagementServiceTests.csproj
-          # Run tests with XML results output
-          dotnet test DashboardManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
+          dotnet restore DashboardManagementServiceTest.csproj
+          dotnet test DashboardManagementServiceTest.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
 
       # Step 6: Upload Test Results as Artifact
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: ./DashboardManagementServiceTests/TestResults.trx
+          path: ./DashboardManagementServiceTest/TestResults.trx
 
       # Step 7: Configure Docker to use gcloud as a credential helper
       - name: Configure Docker
