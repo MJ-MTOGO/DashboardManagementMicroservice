@@ -49,3 +49,4 @@ C:\Users\moham\source\repos\Exam\DashboardManagementMicroservice\DashboardManage
 C:\Users\moham\source\repos\Exam\DashboardManagementMicroservice\DashboardManagementService\obj\Debug\net8.0\DashboardManagementService.pdb
 C:\Users\moham\source\repos\Exam\DashboardManagementMicroservice\DashboardManagementService\obj\Debug\net8.0\DashboardManagementService.genruntimeconfig.cache
 C:\Users\moham\source\repos\Exam\DashboardManagementMicroservice\DashboardManagementService\obj\Debug\net8.0\ref\DashboardManagementService.dll
+C:\Users\moham\source\repos\Exam\DashboardManagementMicroservice\DashboardManagementService\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
