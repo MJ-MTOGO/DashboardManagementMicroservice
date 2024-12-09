@@ -25,6 +25,18 @@ namespace DashboardManagementService
             // Register the SubscriptionManager
             builder.Services.AddSingleton<SubscriptionManager>();
 
+            // Add CORS policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000") // Your frontend URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials(); // Add if credentials like cookies are needed
+                });
+            });
+
             // Add services to the container.
             builder.Services.AddControllers();
 
@@ -43,7 +55,7 @@ namespace DashboardManagementService
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseCors("AllowFrontend");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             // Add WebSocket Middleware

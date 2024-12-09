@@ -27,9 +27,10 @@ namespace DashboardManagementService.Application.Services
         }
         public async Task OrderHandleMessageAsync(string message)   
         {
+            Console.WriteLine("***************************** orderCreatedHandler ---> " + message);
             var orderDto = JsonConvert.DeserializeObject<OrderDto>(message);
             var dashboardDto =  await _dashboardService.UpdateAndGetDashboardDataAsyncSubscribe(null, orderDto);
-
+            Console.WriteLine("***************************** orderCreatedHandler ---> " + dashboardDto);
             var dashboardDtoJson = JsonConvert.SerializeObject(dashboardDto);
             await _webSocketManager.BroadcastMessageAsync(dashboardDtoJson);
         }

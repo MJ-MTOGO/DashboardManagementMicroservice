@@ -19,19 +19,20 @@ namespace DashboardManagementService.Infrastructure.Subscribers
             _ = Task.Run(async () =>
             {
                 var orderCreatedHandler = _serviceProvider.GetRequiredService<DashboardSubscriptionHandler>();
-                await _messageBus.SubscribeAsync("order-created-sub", orderCreatedHandler.OrderHandleMessageAsync);
+                Console.WriteLine("***************************** orderCreatedHandler");
+                await _messageBus.SubscribeAsync("OrderCreated-sub3", orderCreatedHandler.OrderHandleMessageAsync);
             });
 
             _ = Task.Run(async () =>
             {
                 var readyToPickupHandler = _serviceProvider.GetRequiredService<DashboardSubscriptionHandler>();
-                await _messageBus.SubscribeAsync("ready-to-pickup-sub", readyToPickupHandler.OrderHandleMessageAsync);
+                await _messageBus.SubscribeAsync("ready-to-pickup-sub2", readyToPickupHandler.OrderHandleMessageAsync);
             });
 
             _ = Task.Run(async () =>
             {
                 var calculatedEarningsHandler = _serviceProvider.GetRequiredService<DashboardSubscriptionHandler>();
-                await _messageBus.SubscribeAsync("calculated-earnings-sub", calculatedEarningsHandler.EarningHandleMessageAsync);
+                await _messageBus.SubscribeAsync("calculated-earnings-sub1", calculatedEarningsHandler.EarningHandleMessageAsync);
             });
         }
     }

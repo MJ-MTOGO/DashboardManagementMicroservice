@@ -19,33 +19,27 @@ namespace DashboardManagementService.Application.Services
 
         public async Task<DashboardDto> GetDashboardDataAsync()
         {
-            // Fetch Earnings
-            var earnings = await FetchEarningsAsync("http://localhost:5194/api/earnings");
+            // Fetch data
+            var earnings = await FetchEarningsAsync("http://localhost:5194/api/earnings") ?? new List<EarningsDto>();
+            var orders = await FetchOrdersAsync("http://localhost:5194/api/orders") ?? new List<OrderDto>();
 
-            // Fetch Orders
-            var orders = await FetchOrdersAsync("http://localhost:5194/api/orders");
+          
+            // Log fetched data
+            Console.WriteLine("Fetched Orders: " + JsonSerializer.Serialize(orders));
+            Console.WriteLine("Fetched Earnings: " + JsonSerializer.Serialize(earnings));
 
-            // Aggregate data for DashboardDto
-            var dashboardDto = new DashboardDto
-            {
-                TotalMtogoEarning = earnings.Sum(e => e.MtogoEarning),
-                TotalRestaurantEarning = earnings.Sum(e => e.RestaurantEarning),
-                TotalAgentEarning = earnings.Sum(e => e.AgentEarning),
-                TotalPendingOrder = orders.Count(o => o.OrderStatus == "Pending"),
-                TotalReadyToPickupOrder = orders.Count(o => o.OrderStatus == "ReadyToPickup"),
-                TotalDeliveredOrder = orders.Count(o => o.OrderStatus == "Delivered")
-            };
-
-            return dashboardDto;
+            // Aggregate data
+            return AggregateDashboardData(earnings, orders);
         }
-
 
         private async Task<List<EarningsDto>> FetchEarningsAsync(string url)
         {
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var content = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<EarningsDto>>(content);
+
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            return JsonSerializer.Deserialize<List<EarningsDto>>(content, options);
         }
 
         private async Task<List<OrderDto>> FetchOrdersAsync(string url)
@@ -53,55 +47,50 @@ namespace DashboardManagementService.Application.Services
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var content = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<List<OrderDto>>(content);
-        }
 
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            return JsonSerializer.Deserialize<List<OrderDto>>(content, options);
+        }
 
         public async Task<DashboardDto> UpdateAndGetDashboardDataAsyncSubscribe(EarningsDto earningsDto, OrderDto orderDto)
         {
-            // Fetch existing data from the APIs
-            var earnings = await FetchEarningsAsync("http://localhost:5194/api/earnings");
-            var orders = await FetchOrdersAsync("http://localhost:5194/api/orders");
+            // Fetch existing data
+            var earnings = await FetchEarningsAsync("http://localhost:5194/api/earnings") ?? new List<EarningsDto>();
+            var orders = await FetchOrdersAsync("http://localhost:5194/api/orders") ?? new List<OrderDto>();
 
             // Update earnings list
             if (earningsDto != null)
             {
-                var existingEarnings = earnings.FirstOrDefault(e => e.OrderId == earningsDto.OrderId);
-                if (existingEarnings == null)
+                if (!earnings.Any(e => e.OrderId == earningsDto.OrderId))
                 {
-                    // If it doesn't exist, add it
-                    earnings.Add(earningsDto);                  
+                    earnings.Add(earningsDto);
                 }
-             
             }
 
             // Update orders list
             if (orderDto != null)
             {
-                var existingOrder = orders.FirstOrDefault(o => o.OrderId == orderDto.OrderId);
-                if (existingOrder == null)
+                if (!orders.Any(o => o.OrderId == orderDto.OrderId))
                 {
-                    // If it doesn't exist, add it
                     orders.Add(orderDto);
                 }
-               
             }
 
-            // Aggregate data for DashboardDto
-            var dashboardDto = new DashboardDto
+            // Aggregate updated data
+            return AggregateDashboardData(earnings, orders);
+        }
+
+        private DashboardDto AggregateDashboardData(List<EarningsDto> earnings, List<OrderDto> orders)
+        {
+            return new DashboardDto
             {
                 TotalMtogoEarning = earnings.Sum(e => e.MtogoEarning),
                 TotalRestaurantEarning = earnings.Sum(e => e.RestaurantEarning),
                 TotalAgentEarning = earnings.Sum(e => e.AgentEarning),
-                TotalPendingOrder = orders.Count(o => o.OrderStatus == "Pending"),
-                TotalReadyToPickupOrder = orders.Count(o => o.OrderStatus == "ReadyToPickup"),
-                TotalDeliveredOrder = orders.Count(o => o.OrderStatus == "Delivered")
+                TotalPendingOrder = orders.Count(o => string.Equals(o.OrderStatus, "Pending", StringComparison.OrdinalIgnoreCase)),
+                TotalReadyToPickupOrder = orders.Count(o => string.Equals(o.OrderStatus, "ReadyToPickup", StringComparison.OrdinalIgnoreCase)),
+                TotalDeliveredOrder = orders.Count(o => string.Equals(o.OrderStatus, "Delivered", StringComparison.OrdinalIgnoreCase))
             };
-
-          
-            return dashboardDto;
         }
-
-
     }
 }
